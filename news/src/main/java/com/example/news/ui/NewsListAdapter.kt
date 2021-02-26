@@ -113,7 +113,7 @@ class NewsListAdapter(var dataList:List<NewsListResponse.News>) : RecyclerView.A
                 val myholder: mViewHolder4 = holder as mViewHolder4
                 myholder.itemView.findViewById<ConstraintLayout>(R.id.refrelayout)
                     .setOnClickListener {
-                        mOnItemClickListener?.onItemClick( holder.itemViewType,position,"https://www.baidu.com")
+                        mOnItemClickListener?.onItemClick( position,holder.itemViewType,"https://www.baidu.com")
                         notifyDataSetChanged()
                     }
             }
@@ -147,7 +147,7 @@ class NewsListAdapter(var dataList:List<NewsListResponse.News>) : RecyclerView.A
                     .placeholder(R.drawable.ic_baseline_wifi_off_24)
                     .into(myholder.iv_img1)
                 holder.itemView.setOnClickListener {
-                    mOnItemClickListener?.onItemClick( holder.itemViewType,position,dataList[listPosition].url)
+                    mOnItemClickListener?.onItemClick( position,holder.itemViewType,dataList[listPosition].url)
                 }
             }
             2 -> {
@@ -165,7 +165,7 @@ class NewsListAdapter(var dataList:List<NewsListResponse.News>) : RecyclerView.A
                     .placeholder(R.drawable.ic_baseline_wifi_off_24)
                     .into(myholder.iv_img2)
                 holder.itemView.setOnClickListener {
-                    mOnItemClickListener?.onItemClick( holder.itemViewType,position,dataList[listPosition].url)
+                    mOnItemClickListener?.onItemClick( position,holder.itemViewType,dataList[listPosition].url)
                 }
             }
             else -> {
@@ -187,7 +187,7 @@ class NewsListAdapter(var dataList:List<NewsListResponse.News>) : RecyclerView.A
                     .placeholder(R.drawable.ic_baseline_wifi_off_24)
                     .into(myholder.iv_img3)
                 holder.itemView.setOnClickListener {
-                    mOnItemClickListener?.onItemClick( holder.itemViewType,position,dataList[listPosition].url)
+                    mOnItemClickListener?.onItemClick( position,holder.itemViewType,dataList[listPosition].url)
                 }
             }
         }

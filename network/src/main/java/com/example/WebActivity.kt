@@ -1,17 +1,16 @@
-package com.example.news.ui
+package com.example
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.webkit.WebView
 import android.webkit.WebViewClient
-import android.widget.Toast
 import com.alibaba.android.arouter.facade.annotation.Autowired
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.alibaba.android.arouter.launcher.ARouter
-import com.example.news.R
+import com.example.network.R
 
-@Route(path = "/news/web")
+
+@Route(path = "/network/web")
 class WebActivity : AppCompatActivity() {
     @JvmField
     @Autowired

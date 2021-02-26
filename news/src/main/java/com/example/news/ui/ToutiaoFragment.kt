@@ -141,17 +141,16 @@ class ToutiaoFragment : Fragment() {
 
 
                 override fun onItemClick(position: Int, itemType: Int, url: String) {
-                    if (itemType == adapter.banner){
-
-                    }
-                    else if (itemType == adapter.refresh){
+                    if (itemType == adapter.banner) {
+                        Log.d("Mytest", "onItemClick: $itemType")
+                    } else if (itemType == adapter.refresh) {
                         viewModel.getNextNewsList()
-                    }
-                    else {
-                        ARouter.getInstance().build("/news/web")
-                            .withString("urlKey",url)
+                        Log.d("Mytest", "onItemClick: $itemType")
+                    } else {
+                        ARouter.getInstance().build("/network/web")
+                            .withString("urlKey", url)
                             .navigation()
-                        Log.d("Mytest", "on: $url")
+                        Log.d("Mytest", "onItemClick: $itemType")
                     }
                 }
 
