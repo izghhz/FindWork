@@ -1,0 +1,70 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'kotlin-android-extensions'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        applicationId "com.example.findwork"
+        minSdkVersion 23
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        kapt {
+            arguments {
+                arg("AROUTER_MODULE_NAME", project.getName())
+            }
+        }
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation 'com.alibaba:arouter-api:1.5.1'
+    kapt 'com.alibaba:arouter-compiler:1.5.1'
+    implementation rootProject.ext.dependencies["kotlin-stdlib"]
+    implementation rootProject.ext.dependencies["core-ktx"]
+    implementation rootProject.ext.dependencies["appcompat"]
+    implementation rootProject.ext.dependencies["material"]
+    implementation rootProject.ext.dependencies["constraintlayout"]
+    implementation rootProject.ext.dependencies["viewmodel"]
+    implementation rootProject.ext.dependencies["livedata"]
+    implementation rootProject.ext.dependencies["lifecycle-runtime"]
+    implementation rootProject.ext.dependencies["DragPhotoView"]
+    implementation rootProject.ext.dependencies["retrofit2:converter-gson"]
+    implementation rootProject.ext.dependencies["retrofit"]
+    implementation rootProject.ext.dependencies["glide"]
+
+
+
+    testImplementation rootProject.ext.dependencies["junit"]
+    androidTestImplementation rootProject.ext.dependencies["extjunit"]
+    androidTestImplementation rootProject.ext.dependencies["espresso-core"]
+    implementation project(':common')
+    implementation project(':network')
+    if(isNewsModule.toBoolean()){
+        implementation project(':news')
+    }
+    if(isNewsModule.toBoolean()){
+        implementation project(':video')
+    }
+}

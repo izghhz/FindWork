@@ -1,0 +1,7 @@
+include ':video:export_video'
+include ':common'
+include ':network'
+include ':video'
+include ':news'
+include ':app'
+rootProject.name = "FindWork"
