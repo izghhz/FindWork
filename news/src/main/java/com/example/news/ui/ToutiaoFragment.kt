@@ -1,11 +1,13 @@
 package com.example.news.ui
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -13,11 +15,13 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.alibaba.android.arouter.launcher.ARouter
+import com.bumptech.glide.Glide
 import com.example.apiuser.ui.toutiao.NewsListAdapter
 import com.example.apiuser.ui.toutiao.SpacesItemDecoration
 import com.example.common.BaseApplication
 import com.example.news.R
 import com.example.news.model.NewsListResponse
+import com.youth.banner.loader.ImageLoader
 import kotlinx.android.synthetic.main.fragment_toutiao.*
 import kotlinx.android.synthetic.main.fragment_toutiao.view.*
 import java.util.*

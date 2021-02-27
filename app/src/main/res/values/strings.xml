@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">FindWork</string>
+    <string name="home_icon_title">首页</string>
+    <string name="video_icon_title">视频</string>
+    <string name="gallery_icon_title">图库</string>
+    <string name="about_icon_title">关于</string>
 </resources>

@@ -5,6 +5,10 @@ import com.alibaba.android.arouter.launcher.ARouter
 import com.example.common.BaseApplication
 
 class App:BaseApplication() {
+    companion object{
+        var nowTab = 0
+    }
+
     private val isDebug = true
     override fun onCreate() {
         super.onCreate()

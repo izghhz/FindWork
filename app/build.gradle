@@ -40,12 +40,15 @@ android {
 
 dependencies {
     implementation 'com.alibaba:arouter-api:1.5.1'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.1'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     kapt 'com.alibaba:arouter-compiler:1.5.1'
     implementation rootProject.ext.dependencies["kotlin-stdlib"]
     implementation rootProject.ext.dependencies["core-ktx"]
     implementation rootProject.ext.dependencies["appcompat"]
     implementation rootProject.ext.dependencies["material"]
-    implementation rootProject.ext.dependencies["constraintlayout"]
+    //implementation rootProject.ext.dependencies["constraintlayout"]
     implementation rootProject.ext.dependencies["viewmodel"]
     implementation rootProject.ext.dependencies["livedata"]
     implementation rootProject.ext.dependencies["lifecycle-runtime"]
@@ -53,7 +56,6 @@ dependencies {
     implementation rootProject.ext.dependencies["retrofit2:converter-gson"]
     implementation rootProject.ext.dependencies["retrofit"]
     implementation rootProject.ext.dependencies["glide"]
-
 
 
     testImplementation rootProject.ext.dependencies["junit"]

@@ -7,7 +7,11 @@
     android:elevation="5dp"
     app:cardCornerRadius="5dp"
     app:cardElevation="3dp">
-
+<!--<com.example.common.view.ViewPager2Container-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent">-->
+<!--    -->
+<!--</com.example.common.view.ViewPager2Container>-->
     <com.youth.banner.Banner
         android:id="@+id/banner"
         android:layout_width="match_parent"
