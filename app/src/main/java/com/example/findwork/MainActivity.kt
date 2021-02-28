@@ -34,7 +34,7 @@ class MainActivity : BaseActivity() {
         /*val bitmap = BitmapFactory.decodeResource(resources, R.drawable.bakground)
         val outBitmap: Bitmap = HokoBlur.with(this).radius(25).blur(bitmap)
         linearLayout.background = BitmapDrawable(outBitmap)*/
-        linearLayout.setBackgroundResource(R.drawable.bakground)
+        //linearLayout.setBackgroundResource(R.drawable.bakground)
 /*        Blurry.with(context)
             .radius(10)//模糊半径
             .sampling(8)//缩放大小，先缩小再放大
